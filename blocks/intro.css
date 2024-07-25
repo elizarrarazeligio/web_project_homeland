@@ -3,40 +3,86 @@
   display: flex;
   flex-direction: column;
   margin-left: 11.5625%;
-  margin-top: 7.1875%;
+  margin-top: 92px;
   align-items: flex-start;
 }
 
 .intro__title {
-  font-size: 54px;
+  font-size: 3.375em;
   font-weight: 900;
-  line-height: 58px;
+  line-height: 1.074;
   text-align: left;
   margin-bottom: 40px;
 }
 
 .intro__quote-text {
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 1.417;
   text-align: left;
   margin-bottom: 10px;
   width: calc(100% - 92px);
 }
 
 .intro__quote-author {
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 1.417;
   text-align: right;
   margin-bottom: 32px;
   width: calc(100% - 98px);
 }
 
 .intro__description {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 1.63;
   text-align: left;
   width: calc(100% - 108px);
+}
+
+@media screen and (max-width: 1024px) {
+  .intro {
+    width: calc(100% - 48px);
+    margin: 90px auto 0;
+  }
+
+  .intro__title {
+    width: calc(100% - 13px);
+    font-size: 2.8125em;
+    line-height: 1.089;
+    margin-bottom: 50px;
+  }
+
+  .intro__quote-text {
+    width: 100%;
+    margin-bottom: 26px;
+  }
+
+  .intro__quote-author {
+    width: 100%;
+  }
+
+  .intro__description {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .intro {
+    width: calc(100% - 32px);
+    margin-top: 64px;
+  }
+
+  .intro__title {
+    width: 100%;
+    font-size: 2em;
+    line-height: 1.094;
+    margin-bottom: 40px;
+  }
+
+  .intro__quote-text {
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
 }
