@@ -1,0 +1,8 @@
+.photo-grid {
+  display: flex;
+  align-items: center;
+}
+
+.photo-grid__container {
+  display: grid;
+}
