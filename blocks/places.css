@@ -11,16 +11,23 @@
   display: grid;
   width: calc(100% - 296px);
   grid-template-columns: 46.748% 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "title artist"
+    "image description"
+    "button description";
   grid-gap: 48px 40px;
 }
 
 .places__title {
+  grid-area: title;
   font-weight: 900;
   font-size: 4.5em;
   line-height: 1.056;
 }
 
 .places__author {
+  grid-area: artist;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -43,13 +50,13 @@
 }
 
 .places__image {
+  grid-area: image;
   width: 100%;
   box-shadow: 10px 10px 25px 0px #00000080;
 }
 
 .places__description {
-  grid-column: 2;
-  grid-row: 2/4;
+  grid-area: description;
 }
 
 .places__paragraph {
@@ -60,6 +67,7 @@
 }
 
 .places__button {
+  grid-area: button;
   width: 289px;
   height: 48px;
   font-size: 1.125em;
