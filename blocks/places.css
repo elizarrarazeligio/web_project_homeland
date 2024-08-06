@@ -9,7 +9,7 @@
 .places__site {
   padding-bottom: 80px;
   display: grid;
-  width: calc(100% - 296px);
+  width: 77.6563%;
   grid-template-columns: 46.748% 1fr;
   grid-template-rows: auto auto 1fr;
   grid-template-areas:
@@ -17,6 +17,10 @@
     "image description"
     "button description";
   grid-gap: 48px 40px;
+}
+
+.places__site:last-of-type {
+  padding-bottom: 0;
 }
 
 .places__title {
@@ -52,7 +56,11 @@
 .places__image {
   grid-area: image;
   width: 100%;
-  box-shadow: 10px 10px 25px 0px #00000080;
+  box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+.places__image:hover {
+  filter: brightness(50%);
 }
 
 .places__description {
@@ -68,6 +76,7 @@
 
 .places__button {
   grid-area: button;
+  text-decoration: none;
   width: 289px;
   height: 48px;
   font-size: 1.125em;
@@ -79,4 +88,85 @@
   border: none;
   padding: 13px 20px;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.places__button:hover {
+  background: linear-gradient(
+    to right,
+    rgba(2, 120, 254, 0.25),
+    rgba(0, 58, 123, 0.25)
+  );
+}
+
+@media screen and (max-width: 1024px) {
+  .places {
+    padding-top: 88px;
+  }
+
+  .places__site {
+    padding-bottom: 72px;
+    width: calc(100% - 48px);
+    grid-template-columns: 47.22% 1fr;
+    grid-gap: 48px 28px;
+  }
+
+  .places__title {
+    font-size: 2.625em;
+    line-height: 1.095;
+  }
+
+  .places__paragraph {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .places__button {
+    width: 100%;
+    font-size: 1em;
+    padding: 15px 3px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .places {
+    padding-top: 62px;
+  }
+
+  .places__site {
+    padding-bottom: 50px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title"
+      "artist"
+      "image"
+      "description"
+      "button";
+    grid-row-gap: 30px;
+  }
+
+  .places__title {
+    font-size: 2em;
+    line-height: 1.09375;
+    padding: 0 5%;
+  }
+
+  .places__author {
+    padding: 0 5%;
+  }
+
+  .places__description {
+    padding: 0 5%;
+  }
+
+  .places__button {
+    width: 90%;
+    margin: auto;
+    padding: 15.5px auto;
+    font-size: 0.875em;
+  }
 }
